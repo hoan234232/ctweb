@@ -627,9 +627,10 @@ const K4=[[1,0],[-1,0],[0,1],[0,-1]];
 const HD=[[2,1],[2,-1],[-2,1],[-2,-1],[1,2],[1,-2],[-1,2],[-1,-2]];
 const ED=[[2,2],[2,-2],[-2,2],[-2,-2]];
 const kingT=[[],[]],advT=[[],[]],eleT=[[],[]],horseT=[],horseAtt=[],pawnT=[[],[]],rays=[];
+for(let sq=0;sq<90;sq++){horseT[sq]=[];horseAtt[sq]=[];}
 for(let sq=0;sq<90;sq++){
   const r=ROW(sq),c=COL(sq);
-  horseT[sq]=[];horseAtt[sq]=[];pawnT[0][sq]=[];pawnT[1][sq]=[];rays[sq]=[[],[],[],[]];
+  pawnT[0][sq]=[];pawnT[1][sq]=[];rays[sq]=[[],[],[],[]];
   for(let s=0;s<2;s++){
     kingT[s][sq]=[];advT[s][sq]=[];eleT[s][sq]=[];
     if(!inPal(s,r,c))continue;
